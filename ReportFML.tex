@@ -1,0 +1,71 @@
+\documentclass[10pt,twocolumn,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel} % ggf. auskommentieren für englische Silbentrennung
+
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath,bm}
+\usepackage{listings}
+\usepackage{caption}
+\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+\setlength{\intextsep}{2mm plus4mm} % for the "`algorithm" package
+
+
+\setlength{\textheight}{9in}
+\setlength{\textwidth}{6.875in} 
+\setlength{\columnsep}{0.3125in} 
+\setlength{\topmargin}{0.325in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{1pc}
+\setlength{\oddsidemargin}{-.304in}
+\setlength{\evensidemargin}{-.304in}
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref} 
+
+\lstdefinelanguage{Python}{
+ keywords={typeof, null, catch, switch, in, int, str, float, self},
+ keywordstyle=\color{ForestGreen}\bfseries,
+ ndkeywords={boolean, throw, import},
+ ndkeywords={return, class, if ,elif, endif, while, do, else, True, False , catch, def},
+ ndkeywordstyle=\color{BrickRed}\bfseries,
+ identifierstyle=\color{black},
+ sensitive=false,
+ comment=[l]{\#},
+ morecomment=[s]{/*}{*/},
+ commentstyle=\color{purple}\ttfamily,
+ stringstyle=\color{red}\ttfamily,
+}
+
+\begin{document}
+
+
+
+\title{Report\\[0.5cm] \large{Lecture ,,Fundamental Machine Learning'' im WS 2018}}
+
+\author{Juan Antonio Ruiz Leal\\Carlos Alberto Rios Rubiano\\
+{\tt\small hr229@ix.urz.uni-heidelberg.de} \\{\tt\small sy226@ix.urz.uni-heidelberg.de}
+}
+
+\maketitle
+
+
+\input{inhalt.tex}
+
+
+{\small
+\bibliographystyle{unsrtdin}
+\bibliography{literatur}
+}
+
+\end{document}
