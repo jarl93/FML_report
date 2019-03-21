@@ -20,7 +20,36 @@
 
 \end{abstract}
 
-\section{Motivation and overview}
+\section{Aproaches:}
+
+\subsection{Q-learning with regression forest prediction}
+
+
+
+\subsection{Neural Networks}
+
+\subsection{General definitions:}
+
+\subsubsection{Epsilon decay}
+The exploration rate is defined by mena of the follow parameters:
+\begin{lstlisting}
+// Code
+    #Initial exploration rate when training
+    self.epsilon = 1.0
+    # Exploration steps
+    self.exploration_steps = 2000000
+    # Minimum value of epsilon, after this value
+    # epsilon does not decrease anymore
+    self.epsilon_min = 0.1
+    # This hyperparameter is to decrease the number
+    # of explorations as the agent gets better
+    self.epsilon_decay = (self.epsilon - self.epsilon_min) / self.exploration_steps
+\end{lstlisting}
+
+Then the \textit{exploration_steps} is the parameter to fit in each realization. 
+Were \textit{epsilon} decrease by \textit{self.epsilon $-=$ self.epsilon_decay} with every step. 
+
+
 
 \section{State}
 In order to construct the states, we found three set of crucial parameters to describe the situations in the game.
@@ -162,6 +191,7 @@ With the aim to avoid correlated features, and achieve a functional version to c
 The new NPR array is made up by four Booleans, where we calculate the nearest coin direction to operate the ACA with. 
 
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
+\centering	
 	\includegraphics[width=\columnwidth]{NPR-1.png} % alternativ z.B. "width=6cm"
 	\caption{Example of state formation, of ACA and NPR simplified: In right side the avalible moves is showed, then ACA is: (1100), and in the left side, the direction of probable reward (DPR), and is given by: (0101). 
 	from operate with the $\land$ operator, we get the $NPR = (1100)\land (0101)=(0100)$ }%
@@ -195,8 +225,12 @@ For this task we use the state made up by the \textbf{ACA} array (see section \r
     \label{table:Attemp2}
 \end{table*}
 
-We kwon for this task, the agent must to lear two diferent skills. The fisrt one, is the skill avoid the invalid actions, and the skill to chose effciently the path to the coins. 
-In order to measure those skills, we show 
+With the aim to kwon the learning evolution of the training, we calculate the total reward accumulated in all the training realization. At the begining of the training the amount of random actions predominate and the total reward accumulated start to decrease, later at the 150 episode, the agent will perform beter actions, and get positive rewards. Then, the total reward accumulated increase. See figure \ref{fig:TRewAccu}.
+
+This behavior becomes clarified by mean of the figure \ref{fig:TRewAll}. Were shows, a convergence tendence after episode $400$. Up to get a maximal rewarded performed of $828$ (green)
+
+For this task, the agent must to learn two diferent skills. The fisrt one, is the skill to avoid the invalid actions, and the second one is to chose effciently the path to the coins. 
+In order to measure those skills, we show \cite{paperDQL}
 
 
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
@@ -208,25 +242,24 @@ In order to measure those skills, we show
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
 	\includegraphics[width=\columnwidth]{TRewAll.png} % alternativ z.B. "width=6cm"
 	\caption{Total reward in episodes. Plot inside: detailed behavior (in order to show the total reward tendence))}%
-	\label{fig:TRewAccu}%
+	\label{fig:TRewAll}%
+\end{figure}
+
+\begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
+	\includegraphics[width=\columnwidth]{Meassure1Coins.png} % alternativ z.B. "width=6cm"
+	\caption{Meassuring the learning to avoid invalid actions. Plot inside: detailed behavior (in order to show the xtendence))}%
+	\label{fig:M1Coins}%
+\end{figure}
+
+
+\begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
+	\includegraphics[width=\columnwidth]{Meassure2Coins.png} % alternativ z.B. "width=6cm"
+	\caption{Meassuring the learning find the optimal path to get the coins. Plot inside: detailed behavior (in order to show the tendence))}%
+	\label{fig:M1Coins}%
 \end{figure}
 
 
 
-
-
-\begin{lstlisting}
-// Code
-    stringToMatch = 'Score'
-    matchedLine = ''
-    
-    listScore = []
-    listPasos = []
-    listEpsil = []
-    listRewaA = []
-    listQMean = []
-
-\end{lstlisting}
 
 
 
