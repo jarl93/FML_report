@@ -10,19 +10,14 @@
 
 % Haupttext
 
-
-
-
-
-
 \begin{abstract}
 	
 
 \end{abstract}
 
-\section{Motivation and overview}
+\section{Reinforcement learning method and regression model }
 
-\section{State}
+\subsection{First attemp approach}
 In order to construct the states, we found three set of crucial parameters to describe the situations in the game.
 The first set, related to the avaliable cells to move, is constructed by means of an array of four boleans.
 \subsection{States construction:}
@@ -163,6 +158,7 @@ The new NPR array is made up by four Booleans, where we calculate the nearest co
 
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
 \centering	
+
 	\includegraphics[width=\columnwidth]{NPR-1.png} % alternativ z.B. "width=6cm"
 	\caption{Example of state formation, of ACA and NPR simplified: In the left side the avalible moves is showed, then ACA is: (1100), and in the right side, the direction of probable reward (DPR), and is given by: (0101). 
 	from operate with the $\land$ operator, we get the $NPR = (1100)\land (0101)=(0100)$ }%
@@ -171,7 +167,15 @@ The new NPR array is made up by four Booleans, where we calculate the nearest co
 
 Using the \textit{AND} operator $\land$. We construct the \textit{NPR} array, a picted example is showed in figure \ref{fig:NPREx}. And in case of $ACA\land DPR=(0,0,0,0)$, we chose randomly the \textit{NPR} form the composed \textit{ACA} possibilities
 
+\subsection{Observations}
 
+\subsubsection{Rewards}
+The rewards for the agent should be evolutive, that means, the agent should learn first to break the state of stillness, then it should acquire the capacity to move, then dropp bombs, survive the bombs that it has dropped, collect the coins and finally fight against their opponents. In this process the rewards play an important role. For example at the beggining the reward of "WAIT" should be negative to encourage the agent to move. 
+The re
+
+\section{Training process}
+
+\section{Experimental Results}
 \subsection{Task 1:}
 \label{section:Task1}
 
@@ -197,8 +201,12 @@ For this task we use the state made up by the \textbf{ACA} array (see section \r
 \end{table*}
 
 For this task, the agent must to learn two diferent skills. The fisrt one, is the skill to avoid the invalid actions, and the second one is to chose effciently the path to the coins. 
-In order to measure those skills, we show 
 
+With the aim to kwon the learning evolution of the training, we calculate the total reward accumulated in all the training realization. At the begining of the training the amount of random actions predominate and the total reward accumulated start to decrease, later at the 150 episode, the agent will perform beter actions, and get positive rewards. Then, the total reward accumulated increase. See figure \ref{fig:TRewAccu}.
+
+This behavior becomes clarified by mean of the figure \ref{fig:TRewAll}. Were shows, a convergence tendence after episode $400$. Up to get a maximal rewarded performed of $828$ (green)
+
+In order to measure those skills, we show \cite{paperDQL}
 
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
 	\includegraphics[width=\columnwidth]{TRewAccu.png} % alternativ z.B. "width=6cm"
@@ -210,6 +218,21 @@ In order to measure those skills, we show
 	\includegraphics[width=\columnwidth]{TRewAll.png} % alternativ z.B. "width=6cm"
 	\caption{Total reward in episodes. Plot inside: detailed behavior (in order to show the total reward tendence))}%
 	\label{fig:TRewAll}%
+
+\end{figure}
+
+\begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
+	\includegraphics[width=\columnwidth]{Meassure1Coins.png} % alternativ z.B. "width=6cm"
+	\caption{Meassuring the learning to avoid invalid actions. Plot inside: detailed behavior (in order to show the xtendence))}%
+	\label{fig:M1Coins}%
+\end{figure}
+
+
+\begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
+	\includegraphics[width=\columnwidth]{Meassure2Coins.png} % alternativ z.B. "width=6cm"
+	\caption{Meassuring the learning find the optimal path to get the coins. Plot inside: detailed behavior (in order to show the tendence))}%
+	\label{fig:M1Coins}%
+	
 \end{figure}
 
 \begin{figure}[t]% "t" = oben auf der Seite. Alternativ "b" für unten, "H" für direkt im Text
@@ -228,13 +251,63 @@ We solved this problem by means of getting the nearest coin with respect to an u
 
 Another problem we found when solving the task 2 was that we could not punish too much the action of killed by itself, because  since the agent could die by dropping a bomb the agent avoided that action, which leaded to a situation where the agent survive the entire episode but without collecting any coin. So we decided to does not punish the action of killed by itself.
 
+
+\section{Improving the agent and feedback}
+
+\subsection{Improving the agent}
+We learned many things in the development of the project,
+among the most importants are, try the easy solutions first and make sure that these approches work, then continue adding more complicated situations little by little, model them, and make sure that nothing is broken, because we discarded the simple solutions without even prove that they worked and when we tested the implementation of the complicated models and these didn't work we returned to previous ideas.
+
+
+
+
+
+\subsection{Feedback}
+
+When we were training the model we realized that it could be handy to have the possibility to send parameters in the main to the program to speed up the the set up of the hyperparameters.
+
+Another thing that could be improved is to have one not toy but easy example in the assigments or in the class to have a better understanding about the designing of the states, because we were pretty lost with this part at the begginig of the project.
+
+
+\subsection{Q-learning with regression forest prediction}
+
+
+
+
+\subsection{Neural Networks}
+
+\subsection{General definitions:}
+
+\subsubsection{Epsilon decay}
+The exploration rate is defined by mena of the follow parameters:
+\begin{lstlisting}
+// Code
+    #Initial exploration rate when training
+    self.epsilon = 1.0
+    # Exploration steps
+    self.exploration_steps = 2000000
+    # Minimum value of epsilon, after this value
+    # epsilon does not decrease anymore
+    self.epsilon_min = 0.1
+    # This hyperparameter is to decrease the number
+    # of explorations as the agent gets better
+    self.epsilon_decay = (self.epsilon - self.epsilon_min) / self.exploration_steps
+\end{lstlisting}
+
+Then the \textit{exploration\_steps} is the parameter to fit in each realization. 
+Were \textit{epsilon} decrease by \textit{self.epsilon $-=$ self.epsilon\_decay} with every step. 
+
+
+\section{Motivation and overview}
+
+
+
 \section{Model}
 We basically tried to use 2 models, the normal Q learning and the deep Q learning. 
 The model used for the training was constructed based on the algorithm known as Deep Q Learning \cite{paperDQL}
 
 
 \subsection{Algorithm Deep Q Learning}
-
 
 
 \begin{lstlisting}
@@ -249,7 +322,6 @@ The model used for the training was constructed based on the algorithm known as 
     listQMean = []
 
 \end{lstlisting}
-
 
 
 

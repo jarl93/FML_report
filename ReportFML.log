@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  20 MAR 2019 18:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 MAR 2019 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -352,7 +352,14 @@ File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \c@bookmark@seq@number=\count126
 \Hy@SectionHShift=\skip48
 )
-(./ReportFML.aux)
+(./ReportFML.aux
+
+LaTeX Warning: Label `fig:M1Coins' multiply defined.
+
+
+LaTeX Warning: Label `fig:M1Coins' multiply defined.
+
+)
 \openout1 = `ReportFML.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -369,8 +376,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
-
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count127
 \scratchdimen=\dimen132
@@ -427,116 +433,175 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
-LaTeX Font Info:    Try loading font information for U+msa on input line 61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 61.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./inhalt.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]\OT1/cmr/bx/n/14.4 Reinforcement learn-ing
+ []
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 35.
+(caption)                particular \caption on input line 30.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (1.72562pt too wide) in paragraph at lines 36--52
+Overfull \hbox (1.72562pt too wide) in paragraph at lines 31--47
  [] 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 <Maze.png, id=6, 127.1952pt x 125.9907pt>
 File: Maze.png Graphic file (type png)
 <use Maze.png>
-Package pdftex.def Info: Maze.png  used on input line 66.
+Package pdftex.def Info: Maze.png  used on input line 61.
 (pdftex.def)             Requested size: 237.13594pt x 234.90355pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 76.
-See the caption package documentation for explanation.
-
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 100.
+(caption)                particular \caption on input line 71.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 122.
+(caption)                particular \caption on input line 95.
 See the caption package documentation for explanation.
 
-<NPR-1.png, id=42, 75.1608pt x 50.589pt>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 117.
+See the caption package documentation for explanation.
+
+<NPR-1.png, id=36, 75.1608pt x 50.589pt>
 File: NPR-1.png Graphic file (type png)
 <use NPR-1.png>
-Package pdftex.def Info: NPR-1.png  used on input line 166.
+Package pdftex.def Info: NPR-1.png  used on input line 162.
 (pdftex.def)             Requested size: 237.13594pt x 159.61938pt.
-[2 <./Maze.png> <./NPR-1.png>]
-<TRewAccu.png, id=65, 433.62pt x 289.08pt>
+[2 <./Maze.png>]
+<TRewAccu.png, id=69, 433.62pt x 289.08pt>
 File: TRewAccu.png Graphic file (type png)
 <use TRewAccu.png>
-Package pdftex.def Info: TRewAccu.png  used on input line 204.
+Package pdftex.def Info: TRewAccu.png  used on input line 212.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
-<TRewAll.png, id=66, 433.62pt x 289.08pt>
+<TRewAll.png, id=70, 433.62pt x 289.08pt>
 File: TRewAll.png Graphic file (type png)
 <use TRewAll.png>
-Package pdftex.def Info: TRewAll.png  used on input line 210.
+Package pdftex.def Info: TRewAll.png  used on input line 218.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
-<Meassure1Coins.png, id=67, 433.62pt x 289.08pt>
+<Meassure1Coins.png, id=71, 433.62pt x 289.08pt>
 File: Meassure1Coins.png Graphic file (type png)
 <use Meassure1Coins.png>
-Package pdftex.def Info: Meassure1Coins.png  used on input line 216.
+Package pdftex.def Info: Meassure1Coins.png  used on input line 225.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
- [3 <./TRewAccu.png> <./TRewAll.png>])
-(./ReportFML.bbl (./ReportFML.brf)
+<Meassure2Coins.png, id=72, 433.62pt x 289.08pt>
+File: Meassure2Coins.png Graphic file (type png)
+<use Meassure2Coins.png>
+Package pdftex.def Info: Meassure2Coins.png  used on input line 232.
+(pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
+File: Meassure1Coins.png Graphic file (type png)
+<use Meassure1Coins.png>
+Package pdftex.def Info: Meassure1Coins.png  used on input line 239.
+(pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
+ [3 <./NPR-1.png> <./TRewAccu.png>]
+Overfull \hbox (20.86668pt too wide) in paragraph at lines 285--286
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.86699pt too wide) in paragraph at lines 289--290
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (68.86717pt too wide) in paragraph at lines 292--293
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (38.86687pt too wide) in paragraph at lines 293--294
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (260.86913pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 5022) has occurred while \output is active []
+
+ [4 <./TRewAll.png> <./Meassure1Coins.png>]) (./ReportFML.bbl (./ReportFML.brf)
 \tf@brf=\write3
 \openout3 = `ReportFML.brf'.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
- [4
-
- <./Meassure1Coins.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+ [5 <./Meassure2Coins.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./ReportFML.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
-Package rerunfilecheck Info: File `ReportFML.brf' has not changed.
-(rerunfilecheck)             Checksum: 0E2AA7A20D09745BD5F07539CF01BCC8;40.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
+
+
+Package rerunfilecheck Warning: File `ReportFML.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `ReportFML.brf':
+(rerunfilecheck)             Before: 3BDA7F7A624E169E2028478B5F75375F;88
+(rerunfilecheck)             After:  56F4BBA30CE495F0F962F7B5D2245B42;88.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 9676 strings out of 492649
- 140824 string characters out of 6129622
- 250849 words of memory out of 5000000
- 13361 multiletter control sequences out of 15000+600000
+ 9712 strings out of 492649
+ 141370 string characters out of 6129622
+ 252889 words of memory out of 5000000
+ 13366 multiletter control sequences out of 15000+600000
  20208 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,9n,39p,436b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ReportFML.pdf (4 pages, 850167 bytes).
+ 36i,9n,39p,480b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.6.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.6.1.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on ReportFML.pdf (5 pages, 1077331 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
