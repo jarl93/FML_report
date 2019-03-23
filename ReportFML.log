@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 MAR 2019 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 MAR 2019 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,107 +448,164 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--18
  []
 
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 30.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (1.72562pt too wide) in paragraph at lines 31--47
- [] 
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]\OT1/cmr/bx/n/12 Neural Net-work as re-gres-sion
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 5592) in paragraph at lines 38--38
+[]\OT1/cmr/bx/n/12 Regression for-est as re-gres-sion
+ []
 
-<Maze.png, id=6, 127.1952pt x 125.9907pt>
-File: Maze.png Graphic file (type png)
-<use Maze.png>
-Package pdftex.def Info: Maze.png  used on input line 61.
-(pdftex.def)             Requested size: 237.13594pt x 234.90355pt.
- [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 50.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (1.72562pt too wide) in paragraph at lines 51--67
+ [] 
+ []
+
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+<Maze.png, id=31, 127.1952pt x 125.9907pt>
+File: Maze.png Graphic file (type png)
+<use Maze.png>
+Package pdftex.def Info: Maze.png  used on input line 81.
+(pdftex.def)             Requested size: 237.13594pt x 234.90355pt.
+
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 71.
+(caption)                particular \caption on input line 91.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 95.
+(caption)                particular \caption on input line 115.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 117.
+(caption)                particular \caption on input line 137.
 See the caption package documentation for explanation.
 
-<NPR-1.png, id=36, 75.1608pt x 50.589pt>
+<NPR-1.png, id=40, 75.1608pt x 50.589pt>
 File: NPR-1.png Graphic file (type png)
 <use NPR-1.png>
-Package pdftex.def Info: NPR-1.png  used on input line 162.
+Package pdftex.def Info: NPR-1.png  used on input line 182.
 (pdftex.def)             Requested size: 237.13594pt x 159.61938pt.
 [2 <./Maze.png>]
-<TRewAccu.png, id=69, 433.62pt x 289.08pt>
+Underfull \hbox (badness 10000) in paragraph at lines 194--209
+\OML/cmm/m/it/10 CRATE[]DESTROYED \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 p[] \OMS/c
+msy/m/n/10 ^^C
+ []
+
+
+Underfull \hbox (badness 7740) in paragraph at lines 194--209
+\OML/cmm/m/it/10 COIN[]COLLECTED$\OT1/cmr/m/n/10 , where $\OML/cmm/m/it/10 p[]$
+ \OT1/cmr/m/n/10 is the
+ []
+
+
+LaTeX Warning: Citation `PageStrategySelection' on page 3 undefined on input li
+ne 214.
+
+[3 <./NPR-1.png>]
+Underfull \hbox (badness 7649) in paragraph at lines 220--220
+[]\OT1/cmr/bx/n/12 Hyperparameters for Deep Q-
+ []
+
+<TRewAccu.png, id=81, 433.62pt x 289.08pt>
 File: TRewAccu.png Graphic file (type png)
 <use TRewAccu.png>
-Package pdftex.def Info: TRewAccu.png  used on input line 212.
+Package pdftex.def Info: TRewAccu.png  used on input line 270.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
-<TRewAll.png, id=70, 433.62pt x 289.08pt>
+<TRewAll.png, id=82, 433.62pt x 289.08pt>
 File: TRewAll.png Graphic file (type png)
 <use TRewAll.png>
-Package pdftex.def Info: TRewAll.png  used on input line 218.
+Package pdftex.def Info: TRewAll.png  used on input line 276.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
-<Meassure1Coins.png, id=71, 433.62pt x 289.08pt>
+<Meassure1Coins.png, id=83, 433.62pt x 289.08pt>
 File: Meassure1Coins.png Graphic file (type png)
 <use Meassure1Coins.png>
-Package pdftex.def Info: Meassure1Coins.png  used on input line 225.
+Package pdftex.def Info: Meassure1Coins.png  used on input line 283.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
-<Meassure2Coins.png, id=72, 433.62pt x 289.08pt>
+<Meassure2Coins.png, id=84, 433.62pt x 289.08pt>
 File: Meassure2Coins.png Graphic file (type png)
 <use Meassure2Coins.png>
-Package pdftex.def Info: Meassure2Coins.png  used on input line 232.
+Package pdftex.def Info: Meassure2Coins.png  used on input line 290.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
 File: Meassure1Coins.png Graphic file (type png)
 <use Meassure1Coins.png>
-Package pdftex.def Info: Meassure1Coins.png  used on input line 239.
+Package pdftex.def Info: Meassure1Coins.png  used on input line 297.
 (pdftex.def)             Requested size: 237.13594pt x 158.09023pt.
- [3 <./NPR-1.png> <./TRewAccu.png>]
-Overfull \hbox (20.86668pt too wide) in paragraph at lines 285--286
+[4 <./TRewAccu.png> <./TRewAll.png>] [5 <./Meassure1Coins.png> <./Meassure2Coin
+s.png>]
+Overfull \hbox (20.86668pt too wide) in paragraph at lines 347--348
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.86699pt too wide) in paragraph at lines 289--290
+Overfull \hbox (50.86699pt too wide) in paragraph at lines 351--352
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.86717pt too wide) in paragraph at lines 292--293
+Overfull \hbox (68.86717pt too wide) in paragraph at lines 354--355
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.86687pt too wide) in paragraph at lines 293--294
+Overfull \hbox (38.86687pt too wide) in paragraph at lines 355--356
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (260.86913pt too wide) in paragraph at lines 294--295
+Overfull \hbox (260.86913pt too wide) in paragraph at lines 356--357
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Underfull \vbox (badness 5022) has occurred while \output is active []
-
- [4 <./TRewAll.png> <./Meassure1Coins.png>]) (./ReportFML.bbl (./ReportFML.brf)
+) (./ReportFML.bbl (./ReportFML.brf)
 \tf@brf=\write3
 \openout3 = `ReportFML.brf'.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]\OT1/cmr/m/sc/9 Juliani\OT1/cmr/m/n/9 , Arthur:  Sim-ple Re-in-force-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\OT1/cmr/m/n/9 Learn-ing with Ten-sor-flow Part 7: Action-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\OT1/cmr/m/n/9 Selection Strate-gies for Ex-plo-ration.  (2014).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[][]$\OT1/cmtt/m/n/9 https : / / medium . com / emergent-[]future /
+ []
+
+
+Overfull \hbox (298.6469pt too wide) in paragraph at lines 17--17
+\OT1/cmtt/m/n/9 simple-[]reinforcement-[]learning-[]with-[]tensorflow-[]part-[]
+7-[]action-[]selection-[]strategies-[]for-[]exploration-[]d3a97b7cceaf$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+
+ []
+
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
- [5 <./Meassure2Coins.png>]
+ [6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./ReportFML.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
@@ -559,49 +616,45 @@ Package rerunfilecheck Warning: File `ReportFML.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `ReportFML.brf':
-(rerunfilecheck)             Before: 3BDA7F7A624E169E2028478B5F75375F;88
-(rerunfilecheck)             After:  56F4BBA30CE495F0F962F7B5D2245B42;88.
+(rerunfilecheck)             Before: 2462878B09FA568C45216E735359F0CB;148
+(rerunfilecheck)             After:  2E55E0C1454FD505D395C8F60B95CCAA;148.
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 9712 strings out of 492649
- 141370 string characters out of 6129622
- 252889 words of memory out of 5000000
- 13366 multiletter control sequences out of 15000+600000
+ 9720 strings out of 492649
+ 141528 string characters out of 6129622
+ 256932 words of memory out of 5000000
+ 13371 multiletter control sequences out of 15000+600000
  20208 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,9n,39p,480b,1448s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.6.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.6.1.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ReportFML.pdf (5 pages, 1077331 bytes).
+ 36i,9n,39p,597b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on ReportFML.pdf (6 pages, 1112914 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 80 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

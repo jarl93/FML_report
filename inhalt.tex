@@ -17,6 +17,26 @@
 
 \section{Reinforcement learning method and regression model }
 
+We chose Q-learning as reinforcement learning method, and we try to use two different regression models, Neural network and regression forest.   
+
+\subsection{Q-learning }
+In Q-learning we define a function $Q(s,a)$ representing the discounted future reward when we perform action $a$ in state $s$, and continue optimally from that point on.
+
+$Q(s_t,a_t)=max_{\pi}R_{t+1}$
+\newline
+Where $R_{t+1}$ represents the total future reward at step $t+1$ and
+$\pi$ is the policy, the rule how we choose an action in each state.
+\newline
+The way to think about $Q(s,a)$ is that it is "the best possible score at the end of game after performing action $a$ in state $s$". It is called Q-function, because it represents the "quality" of certain action in given state.
+
+Let?s focus on just one transition $(s,a,r,s')$. Just like with discounted future rewards in previous section we can express Q-value of state $s$ and action $a$ in terms of Q-value of next state $s'$.
+
+
+
+\subsection{Neural Network as regression model}
+
+\subsection{Regression forest as regression model}
+
 \subsection{First attemp approach}
 In order to construct the states, we found three set of crucial parameters to describe the situations in the game.
 The first set, related to the avaliable cells to move, is constructed by means of an array of four boleans.
@@ -167,13 +187,51 @@ The new NPR array is made up by four Booleans, where we calculate the nearest co
 
 Using the \textit{AND} operator $\land$. We construct the \textit{NPR} array, a picted example is showed in figure \ref{fig:NPREx}. And in case of $ACA\land DPR=(0,0,0,0)$, we chose randomly the \textit{NPR} form the composed \textit{ACA} possibilities
 
-\subsection{Observations}
+\subsection{Rewards}
+The rewards for the agent should be evolutionary, that means, in principle the agent should learn to break the state of stillness, then it should acquire the capacity to move, then dropp bombs, survive the bombs that it has dropped, collect the coins it has found and finally fight against its opponents. In this process the rewards play an important role. For example at the beggining the reward of "WAITED" should be negative to encourage the agent to move. 
+The following rewards were set:
 
-\subsubsection{Rewards}
-The rewards for the agent should be evolutive, that means, the agent should learn first to break the state of stillness, then it should acquire the capacity to move, then dropp bombs, survive the bombs that it has dropped, collect the coins and finally fight against their opponents. In this process the rewards play an important role. For example at the beggining the reward of "WAIT" should be negative to encourage the agent to move. 
-The re
+        $OPPONENT\_ELIMINATED = 500$: this is a natural coice since the reward in the game is 5 and we scalate all the rewards by 100.
+ \newline
+        $COIN\_COLLECTED = 100$: another simple choice for the same reason that the opponent eliminated.
+ \newline
+        $CRATE\_DESTROYED = p_{foun\_coin}*COIN\_COLLECTED$, where $p_{foun\_coin}$ is the probabylity of found a coin taking into a account the number of crates at the begginig of the game.
+ \newline
+        $INVALID\_ACTION = -8$: this reward is negative to discourage the agent to take invalid actions.
+ \newline
+        $VALID = -2$: this reward make the agent take the shortest path, but in practice was useful just for the first task.
+ \newline
+        $COIN\_FOUND = 50$: this reward turned to be irrelevant due the actions that make it happen are already rewarded which are destroy crates and survive.
+ \newline
+        $KILLED\_SELF = -50$: this reward was the most difficult to tun, due one can think that should be pretty negative since die is sometihing quite undesired, but for training should be tuned carefully with smaller values, beacuse at the begginign, if the agent receives very negative reward for dying, that encourages the agent to don't dropp bombs because it get killed taking random actions, and therefore the agent can not continue with the evolutionary wanted process.
+        $CRATE\_DESTROYED\_LESS = 4$: this reward is for the begginig of the training and it allows the agent to want to dropp bombs even if get killed but destroying a crate, which stimulate the agent to dropp bombs in correct places. Then the agent obtain $CRATE\_DESTROYED$ reward once it sucessfully destroyed a crate and survive, which is one of the most important behaviors the agent should learn.
+        $WAIT = -2$: this reward is rather outstanding because is like the starter to all the evolutionary process, since it encourages the agent to do something and start learning. We found that even not setting this reward as negative the agent could arrive a good solution but slower.
 
 \section{Training process}
+
+\subsection{Action selection strategy for exploration}
+
+The strategy used for exploration was $ \epsilon-greedy$. In this approach  the agent chooses what it believes to be the optimal action most of the time, but occasionally acts randomly. At the start of the training process the $\epsilon$ value is often initialized to a large probability, to encourage exploration in the face of knowing little about the environment. The value is then annealed down to a small constant (often 0.1), as the agent is assumed to learn most of what it needs about the environment \cite{PageStrategySelection}. 
+
+We utilized this stratey because is rather straightforward to implement and it shows good resuts according to the community, thought we did not have time to experiment with any other strategy for exploration.
+
+In the training we set the initial value of $\epsilon$ to $1$ and then decreases until $0.1$. We did not train with other values, again because lack of time.
+
+\subsection{Hyperparameters for Deep Q-Learning}
+
+We used the following hyperparameters for DQL:
+
+As discount factor we used $\gamma = 0.95$ most of the time and $\gamma = 0.99$, showing similar results, this is because we weighted the future events almost as much as the instant ones.
+
+The following hyperparameters were tuned based on several implementations of deep Q learning we looked at and based on the length of the state.
+
+$memory\_size = 200000$: this is number of tuples $(state, action, reward, next state, done)$, where all are described by its name except for done, which indicates if an episode has ended. 
+
+$replay\_minimun\_size = 1000$: this tells how many tuples we need to start to do the training, which is done at the end of each episode.
+
+$batch\_size = 1000$: it indicates how many samples we get from the memory to propagated through the network .
+
+$exploration\_steps = 100000$: it denotes the number of steps for which the $\epsilon$ is greater than $epsilon\_min = 0.1$, wich tells us the lower boundary of $\epsilon$ for the action selection strategy.
 
 \section{Experimental Results}
 \subsection{Task 1:}
@@ -256,9 +314,9 @@ Another problem we found when solving the task 2 was that we could not punish to
 
 \subsection{Improving the agent}
 We learned many things in the development of the project,
-among the most importants are, try the easy solutions first and make sure that these approches work, then continue adding more complicated situations little by little, model them, and make sure that nothing is broken, because we discarded the simple solutions without even prove that they worked and when we tested the implementation of the complicated models and these didn't work we returned to previous ideas.
-
-
+among the most important ones are, try the easy solutions first and make sure that these approches work, then continue adding more complicated situations little by little, model them, and make sure that nothing is broken, because we discarded the simple solutions without even proving that they worked and when we tested the implementation of the complicated models and these didn't work we returned to previous ideas.
+ 
+The agent could improve its results if we would have run it  in a GPU, this would have accelerated the tests and made everything faster. We thought that the time invested in setting up the GPU for the code could be potentially used for the design and the implementation, when we realized the slowleness of the trainign process was too late, though we think this is a common error of beginners.
 
 
 
@@ -266,7 +324,11 @@ among the most importants are, try the easy solutions first and make sure that t
 
 When we were training the model we realized that it could be handy to have the possibility to send parameters in the main to the program to speed up the the set up of the hyperparameters.
 
+Another thing that could be handy is that was possible to get the remaining time that an opponent has to get a bomb again.
+
 Another thing that could be improved is to have one not toy but easy example in the assigments or in the class to have a better understanding about the designing of the states, because we were pretty lost with this part at the begginig of the project.
+
+
 
 
 \subsection{Q-learning with regression forest prediction}
