@@ -188,6 +188,8 @@ The new NPR array is made up by four Booleans, where we calculate the nearest co
 Using the \textit{AND} operator $\land$. We construct the \textit{NPR} array, a picted example is showed in figure \ref{fig:NPREx}. And in case of $ACA\land DPR=(0,0,0,0)$, we chose randomly the \textit{NPR} form the composed \textit{ACA} possibilities
 
 \subsection{Rewards}
+
+TO DELETE
 The rewards for the agent should be evolutionary, that means, in principle the agent should learn to break the state of stillness, then it should acquire the capacity to move, then dropp bombs, survive the bombs that it has dropped, collect the coins it has found and finally fight against its opponents. In this process the rewards play an important role. For example at the beggining the reward of "WAITED" should be negative to encourage the agent to move. 
 The following rewards were set:
 
@@ -211,6 +213,8 @@ The following rewards were set:
 
 \subsection{Action selection strategy for exploration}
 
+TO DELETE
+
 The strategy used for exploration was $ \epsilon-greedy$. In this approach  the agent chooses what it believes to be the optimal action most of the time, but occasionally acts randomly. At the start of the training process the $\epsilon$ value is often initialized to a large probability, to encourage exploration in the face of knowing little about the environment. The value is then annealed down to a small constant (often 0.1), as the agent is assumed to learn most of what it needs about the environment \cite{PageStrategySelection}. 
 
 We utilized this stratey because is rather straightforward to implement and it shows good resuts according to the community, thought we did not have time to experiment with any other strategy for exploration.
@@ -218,6 +222,8 @@ We utilized this stratey because is rather straightforward to implement and it s
 In the training we set the initial value of $\epsilon$ to $1$ and then decreases until $0.1$. We did not train with other values, again because lack of time.
 
 \subsection{Hyperparameters for Deep Q-Learning}
+
+TO DELETE
 
 We used the following hyperparameters for DQL:
 
